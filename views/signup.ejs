@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>SignUp</h2>
+        <form action="/signup" method="post">
+          <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <label for="password">password:</label>
+            <input type="password" id="password" name="password" placeholder="password" required autocomplete="off">
+            <div> 
+          <div class="form-group">
+          <label for="Email">Email:</label>
+          <input type="text" id="email" name="email" placeholder="Enter email" required>
+        </div>
+        <div class="form-group">
+        <label for="field">field:</label>
+        <input type="field" id="field" name="field" placeholder="field" required>
+    </div>
+    <div class="form-group">
+    <p>please identify the user type</p>
+    <select  id="user" name="user_type"><option value="student">Student</option><option value="instution"selected>Instution</option></select>
+    <div> 
+        <div class="form-group">
+        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>    
+        </div>
+
+    
+          </form>
+          <button type="submit" class="submit-btn">Submit</button>
+        </form>
+      </div>
+    
+</body>
+</html>
