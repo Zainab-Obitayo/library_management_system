@@ -39,15 +39,17 @@ app.post("/signup", async (req, res) => {
     const data = {
         name: req.body.username,
         password: req.body.password,
-        email: req.body.email,
-        field: req.body.field,
-        user_type: req.body.user_type
+        phone: req.body.phone,
+        email: req.body.email, 
+        usertype: req.body.user_type
     }
+
     // Check if the username already exists in the database
+
     const existingUser = await collection.findOne({ name: data.name });
     if (existingUser) {
         res.send('User already exists. Please choose a different username.');
-    } else {
+    }else {
         // Hash the password using bcrypt
         const saltRounds = 10; // Number of salt rounds for bcrypt
         const hashedPassword = await bcryptjs.hash(data.password, saltRounds);
@@ -55,6 +57,9 @@ app.post("/signup", async (req, res) => {
         const userdata = await collection.insertMany(data);
         console.log(userdata);
     }
+
+    
+    
     res.render("dashboard")
 });
 
@@ -65,18 +70,21 @@ app.post("/login", async (req, res) => {
             res.send("User name cannot found")
         }
         // Compare the hashed password from the database with the plaintext password
-        const isPasswordMatch = await bcryptjs.compare(req.body.password, check.password);
+        const isPasswordMatch = await bcrypt.compare(req.body.password, check.password);
         if (!isPasswordMatch) {
             res.send("wrong Password");
         }
         else {
-            res.render("dashboard");
+            res.render("home");
         }
     }
     catch {
         res.send("wrong Details");
     }
 });
+
+
+
 
 
 app.listen(port, ()=>{

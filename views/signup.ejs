@@ -1,44 +1,56 @@
-<!DOCTYPE html>
+<<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SignUp</title>
-    <link rel="stylesheet" href="/style.css">
+    <title>Register - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="form-container">
-        <h2>SignUp</h2>
-        <form action="/signup" method="post">
-          <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="username" placeholder="Enter your name" required autocomplete="off">
-          </div>
-          <div class="form-group">
-            <label for="password">password:</label>
-            <input type="password" id="password" name="password" placeholder="password" required autocomplete="off">
-            <div> 
-          <div class="form-group">
-          <label for="Email">Email:</label>
-          <input type="text" id="email" name="email" placeholder="Enter email" required>
+    <header>
+        <div class="container">
+            <h1>Library Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/login">Login</a></li>
+                    <li><a href="/signup">Register</a></li>
+                </ul>
+            </nav>
         </div>
-        <div class="form-group">
-        <label for="field">field:</label>
-        <input type="field" id="field" name="field" placeholder="field" required>
-    </div>
-    <div class="form-group">
-    <p>please identify the user type</p>
-    <select  id="user" name="user_type"><option value="student">Student</option><option value="instution"selected>Instution</option></select>
-    <div> 
-        <div class="form-group">
-        <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>    
-        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="register">
+                <h2>Register</h2>
+                <form action="/signup" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="username" required>
 
-    
-          </form>
-          <button type="submit" class="submit-btn">Submit</button>
-        </form>
-      </div>
-    
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="usertype">User Type:</label>
+                    <select id="user_type" name="user_type">
+                        <option value="student">Student</option>
+                        <option value="institution" selected>Institution</option>
+                    </select>
+
+                    <button type="submit">Register</button>
+                </form>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>

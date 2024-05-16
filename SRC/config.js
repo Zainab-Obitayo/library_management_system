@@ -15,18 +15,22 @@ const Loginschema = new mongoose.Schema({
     },
     password: {
         type:String,
-        required: true
+        required: true,
+        
+    },
+    
+    phone:{
+        type: String,
+        required:true,
+        unique:true
+
     },
     email: {
         type:String,
         required: true,
         unique: true
     },
-    field:{
-        type:String,
-        require: true
-    },
-    user_type:{
+    usertype:{
         type:String,
         required: true
     },

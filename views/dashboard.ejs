@@ -3,18 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Dashboard - Library Management System</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div style="text-align: center;">
-      
-        <h1>welcome +name</h1>
-    <section id="sidebar" ></section>   
-        <a href="/profile"><button type="submit" name="button" id="p_b">profile</button></a>
-        <a href="/bookshelf"><button type="submit" name="button" id="b_b">bookshelf</button></a>
-        <a href="/favorite"><button type="submit" name="button" id="a_b"><svg aria-hidden="true" viewBox="0 0 10 10"><path d="M7 9L5 8 3 9V6L1 4h3l1-3 1 3h3L7 6z" /></svg>Add to favorites<favorite</button></a>
-        <a href="/settings"><button type="submit" name="button" id="s_b">settings</button></a>
-    </div>
-    
+    <header>
+        <div class="container">
+            
+                <img src="/img-library.jpg" alt="Library Logo" class="logo">
+               
+            <h1>Library Management System</h1>
+            <nav>
+                <ul>
+                    <li><a href="/home">Home</a></li>
+                    <li><a href="/dashboard">Dashboard</a></li>
+                    <li><a href="/login">login</a></li>
+                    <li><a href="/signup">signup</a></li>
+                    
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <section class="dashboard">
+                <h2>Dashboard</h2>
+                <div class="dashboard-grid">
+                    <div class="card">
+                        <h3>Books</h3>
+                        <p>Manage and view all books in the library.</p>
+                        <a href="books.html" class="cta-button">View Books</a>
+                    </div>
+                    <div class="card">
+                        <h3>Members</h3>
+                        <p>Manage and view all library members.</p>
+                        <a href="members.html" class="cta-button">View Members</a>
+                    </div>
+                    <div class="card">
+                        <h3>Lending</h3>
+                        <p>Manage book lending and returns.</p>
+                        <a href="lending.html" class="cta-button">Manage Lending</a>
+                    </div>
+                    <div class="card">
+                        <h3>Contact</h3>
+                        <p>Contact library administration.</p>
+                        <a href="contact.html" class="cta-button">Contact Us</a>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Library Management System. All rights reserved.</p>
+        </div>
+    </footer>
 </body>
 </html>
